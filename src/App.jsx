@@ -90,7 +90,21 @@ function App() {
     setGameTurns([]);
   }
 
-  function handlePlayerNameChange(playerSymbol, newName) {
+  // function handlePlayerNameChange(playerSymbol, newName) {
+  //   setPlayers((prevPlayers) => {
+  //     return {
+  //       ...prevPlayers,
+  //       [symbol]: newName,
+  //     };
+  //   });
+  // }
+
+  /**
+   * Old one was WRONG - playerSymbol was not defined
+   * @param {string} newName 
+   * @param {string} symbol 
+   */
+  function handlePlayerNameChange(newName, symbol) {
     setPlayers((prevPlayers) => {
       return {
         ...prevPlayers,
@@ -125,4 +139,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
